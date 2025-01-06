@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #fdfdfd;
+        
+    }
+    .cross{
+        width: 100px;
+        height: 100px;
+        background-color: orangered;
+        position: relative;
+        border-radius: 50%;
+        transform: rotate(50deg);
+    }
+    .cross::after,.cross::before
+    {
+        content: '';
+        position: absolute;
+        background-color: #fdfdfd;
+    }
+    .cross::before
+    {
+        width: 100px;
+        height: 10px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    .cross::after
+    {
+        width: 10px;
+        height: 100px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+   </style>
+</head>
+<body>
+    <div class="cross"></div>
+</body>
+</html>
